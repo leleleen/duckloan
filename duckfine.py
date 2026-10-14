@@ -14,7 +14,7 @@ class DuckFine:
         chargeable = max(0, days_late - self.GRACE_DAYS)
         fee = chargeable * self.DAILY_FEE
         if deluxe:
-            fee *= 2
+            fee *= 3
         fee = min(fee, self.MAX_FEE)
         self.total_owed += fee
         return fee
